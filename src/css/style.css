@@ -1,0 +1,44 @@
+.root {
+    -fx-background-color: #000;
+}
+
+#Label1 {
+    -fx-text-fill: #0F0;
+}
+
+#Label1 .radio {
+    -fx-background-color: #000;
+    -fx-border-radius: 10px;
+    -fx-border-color: #0F0;
+    -fx-mark-color: #0F0;
+}
+
+#Button1 {
+    -fx-border-color: #0F0;
+    -fx-background-color: #000;
+    -fx-text-fill: #0F0;
+}
+
+#Button1:disabled {
+    -fx-opacity: 100;
+}
+
+#Button1:hover {
+    -fx-border-color: #0AF;
+    -fx-background-color: #000;
+    -fx-text-fill: #0AF;
+}
+
+#Button2 {
+    -fx-background-color: #000;
+}
+
+#Button2:disabled {
+    -fx-opacity: 100;
+}
+
+#TextBox1 {
+    -fx-background-color: #000;
+    -fx-border-color: #0F0;
+    -fx-text-fill: #0F0;
+}
