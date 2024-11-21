@@ -1,8 +1,8 @@
 ## Getting Started
 TicTacToe 
-Source Version 0.8
+Source Version 1.0
 
-Everything Works but still needs polishing which we didn't got time for
+Now Winning Lines Also Works Thats Why We Can Say This is Released
 I with my Team of Collage Friends created this project for End Semister Exams.
 
 i used
