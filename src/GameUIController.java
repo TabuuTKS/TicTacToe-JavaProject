@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -36,6 +37,7 @@ public class GameUIController {
     @FXML
     Button button00, button01, button02, button10, button11, button12, button20, button21, button22;
     @FXML
+    private Line LineD1, LineD2, LineV1, LineV2, LineV3, LineH1, LineH2, LineH3;
     public Label TurnLabel;
     private ImageView imageView;
     private File XImage = new File(resourceLoader.getAsset("image/Ximage.png"));
@@ -86,6 +88,8 @@ public class GameUIController {
                 results();
             }
         }
+
+        WinningLines();
     }
 
     //will disable all buttons
@@ -175,6 +179,15 @@ public class GameUIController {
         button21.setDisable(false);
         button22.setDisable(false);
 
+        LineD1.setVisible(false);
+        LineD2.setVisible(false);
+        LineV1.setVisible(false);
+        LineV2.setVisible(false);
+        LineV3.setVisible(false);
+        LineH1.setVisible(false);
+        LineH2.setVisible(false);
+        LineH3.setVisible(false);
+
         imageView = (ImageView) button00.getGraphic();
         imageView.setImage(new Image(EmptyImage.toURI().toString()));
         imageView = (ImageView) button01.getGraphic();
@@ -209,6 +222,49 @@ public class GameUIController {
         scene.getStylesheets().add(CSS);
         stage.setScene(scene);
         stage.show();
+    }
+
+    void WinningLines() {
+        //Daigonal 1
+        if((gameBoard.cellState[0][0] == Cell.X && gameBoard.cellState[1][1] == Cell.X && gameBoard.cellState[2][2] == Cell.X)
+        || (gameBoard.cellState[0][0] == Cell.O && gameBoard.cellState[1][1] == Cell.O && gameBoard.cellState[2][2] == Cell.O)) {
+            LineD1.setVisible(true);
+        }
+        //Daigonal 2
+        else if ((gameBoard.cellState[0][2] == Cell.X && gameBoard.cellState[1][1] == Cell.X && gameBoard.cellState[2][0] == Cell.X)
+        || (gameBoard.cellState[0][2] == Cell.O && gameBoard.cellState[1][1] == Cell.O && gameBoard.cellState[2][0] == Cell.O)) {
+            LineD2.setVisible(true);
+        }
+        //Collumn 1
+        else if ((gameBoard.cellState[0][0] == Cell.X && gameBoard.cellState[1][0] == Cell.X && gameBoard.cellState[2][0] == Cell.X)
+        || (gameBoard.cellState[0][0] == Cell.O && gameBoard.cellState[1][0] == Cell.O && gameBoard.cellState[2][0] == Cell.O)) {
+            LineV1.setVisible(true);
+        }
+        //Collumn 2
+        else if ((gameBoard.cellState[0][1] == Cell.X && gameBoard.cellState[1][1] == Cell.X && gameBoard.cellState[2][1] == Cell.X)
+        || (gameBoard.cellState[0][1] == Cell.O && gameBoard.cellState[1][1] == Cell.O && gameBoard.cellState[2][1] == Cell.O)) {
+            LineV2.setVisible(true);
+        }
+        //Collumn 3
+        else if ((gameBoard.cellState[0][2] == Cell.X && gameBoard.cellState[1][2] == Cell.X && gameBoard.cellState[2][2] == Cell.X)
+        || (gameBoard.cellState[0][2] == Cell.O && gameBoard.cellState[1][2] == Cell.O && gameBoard.cellState[2][2] == Cell.O)) {
+            LineV3.setVisible(true);
+        }
+        //Row 1
+        else if ((gameBoard.cellState[0][0] == Cell.X && gameBoard.cellState[0][1] == Cell.X && gameBoard.cellState[0][2] == Cell.X)
+        || (gameBoard.cellState[0][0] == Cell.O && gameBoard.cellState[0][1] == Cell.O && gameBoard.cellState[0][2] == Cell.O)) {
+            LineH1.setVisible(true);
+        }
+        //Row 2
+        else if ((gameBoard.cellState[1][0] == Cell.X && gameBoard.cellState[1][1] == Cell.X && gameBoard.cellState[1][2] == Cell.X)
+        || (gameBoard.cellState[1][0] == Cell.O && gameBoard.cellState[1][1] == Cell.O && gameBoard.cellState[1][2] == Cell.O)) {
+            LineH2.setVisible(true);
+        }
+        //Row 3
+        else if ((gameBoard.cellState[2][0] == Cell.X && gameBoard.cellState[2][1] == Cell.X && gameBoard.cellState[2][2] == Cell.X)
+        || (gameBoard.cellState[2][0] == Cell.O && gameBoard.cellState[2][1] == Cell.O && gameBoard.cellState[2][2] == Cell.O)) {
+            LineH3.setVisible(true);
+        }
     }
 }
 
