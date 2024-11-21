@@ -5,6 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameUIController">
@@ -70,5 +71,13 @@
             <Font size="17.0" />
          </font>
       </Button>
+      <Line id="LineD1" fx:id="LineD1" endX="254.29290771484375" endY="171.0" layoutX="84.0" layoutY="123.0" startX="79.29289245605469" visible="false" />
+      <Line id="LineD2" fx:id="LineD2" endX="74.0" endY="168.0" layoutX="88.0" layoutY="127.0" startX="250.0" startY="-5.0" visible="false" />
+      <Line id="LineV1" fx:id="LineV1" endX="2.0" endY="152.0" layoutX="185.0" layoutY="145.0" startX="2.0" startY="-22.707107543945312" visible="false" />
+      <Line id="LineV2" fx:id="LineV2" endX="2.0" endY="152.0" layoutX="248.0" layoutY="145.0" startX="2.0" startY="-22.707107543945312" visible="false" />
+      <Line id="LineV3" fx:id="LineV3" endX="2.0" endY="152.0" layoutX="314.0" layoutY="145.0" startX="2.0" startY="-22.707107543945312" visible="false" />
+      <Line id="LineH1" fx:id="LineH1" endX="75.70709228515625" layoutX="263.0" layoutY="146.0" startX="-100.0" visible="false" />
+      <Line id="LineH2" fx:id="LineH2" endX="75.70709228515625" layoutX="264.0" layoutY="208.0" startX="-100.0" visible="false" />
+      <Line id="LineH3" fx:id="LineH3" endX="75.70709228515625" layoutX="264.0" layoutY="274.0" startX="-100.0" visible="false" />
    </children>
 </AnchorPane>
