@@ -42,3 +42,8 @@
     -fx-border-color: #0F0;
     -fx-text-fill: #0F0;
 }
+
+#LineD1, #LineD2, #LineV1, #LineV2, #LineV3, #LineH1, #LineH2, #LineH3 {
+    -fx-stroke: #fff;
+    -fx-stroke-width: 3px;
+}
